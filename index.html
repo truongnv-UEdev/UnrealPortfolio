@@ -1,0 +1,923 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="descriptioniption" content="Unreal Engine Portfolio">
+    <meta name="author" content="Nguyen Van Truong">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Iceland&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Black+Ops+One&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <title data-i18n-key="app-title">Nguyen Van Truong - Unreal Engine Developer</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/ue-logo.png">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/unreal-dev.css">
+    <link rel="stylesheet" href="assets/css/unreal-portfolio.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <!--Swiper CSS-->
+    <link href="assets/css/swiper-bundle.min.css" rel="stylesheet" />
+    
+</head>
+
+  <body>
+
+      <!-- ***** Preloader Start ***** -->
+      <div id="js-preloader" class="js-preloader">
+          <div class="preloader-inner">
+              <span class="dot"></span>
+              <div class="dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </div>
+          </div>
+      </div>
+      <!-- ***** Preloader End ***** -->
+      <!-- ***** Header Area Start ***** -->
+      <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+          <div class="container">
+              <div class="row">
+                  <div class="col-12">
+                      <nav class="main-nav">
+                          <!-- ***** Logo Start ***** -->
+                          <div onclick="openPortfolio(null, 'about-me');" class="logo">
+                              <img src="assets/images/avatar.png" alt="Nguyen Van Truong - Unreal Engine Developer">
+                              <h4 class="logo-name" data-i18n-key="my-name">Nguyen Van Truong</h4>
+                          </div>
+                          <!-- ***** Logo End ***** -->
+                          <!-- ***** Menu Start ***** -->
+                          <ul class="nav">
+                              <li><div class="gradient-button"><a id="contact_trigger" href="#modal"><i class="fa fa-paper-plane"></i><em data-i18n-key="contact-now" style="padding-left: 0.5em"> Contact now</em></a></div></li>                              
+                          </ul>
+                          <!-- ***** Menu End ***** -->
+                      </nav>
+                  </div>
+              </div>
+          </div>
+      </header>
+      <!-- ***** Header Area End ***** -->
+
+      <!-- ***** Language Selection ***** -->
+      <div class="localization">
+          <form action="" class="language-picker__form">
+              <label for="language-picker"></label>
+              <select onchange="onLanguageChange()" name="language-picker" id="language-picker">
+                  <option lang="en" value="en" style="background-image: url(https://cdn-icons-png.flaticon.com/128/197/197374.png);" selected>ENG</option>
+                  <option lang="vi" value="vi">VIE</option>
+              </select>
+          </form>
+      </div>
+      
+      
+      <!-- ***** Language Selection End ***** -->
+      
+      <div id="modal" class="popupContainer" style="display:none;">
+          <div class="popupHeader">
+              <span class="header_title"><i class="fa fa-paper-plane"></i> Contact to Me </span>
+              <span class="modal_close"><i class="fa fa-times"></i></span>
+          </div>
+
+          <section class="popupBody">
+              <!-- Social Login -->
+              <div class="social_login">
+                  <div class="">
+                      <a href="mailto:truongnv.dev@gmail.com" class="social_box google">
+                          <span class="icon"><i class="fa fa-envelope"></i></span>
+                          <span class="icon_title" data-i18n-key="contact-mail">Connect via Mail</span>
+                      </a>
+
+                      <a href="https://www.linkedin.com/in/truong-nguyen-883b79234/" class="social_box linkedin">
+                          <span class="icon"><i class="fab fa-linkedin"></i></span>
+                          <span class="icon_title" data-i18n-key="contact-linkedin">Connect via LinkedIn</span>
+                      </a>
+
+                      <a href="https://www.facebook.com/truongnv.tcl/" class="social_box fb">
+                          <span class="icon"><i class="fab fa-facebook"></i></span>
+                          <span class="icon_title" data-i18n-key="contact-fb">Connect via Facebook</span>
+
+                      </a>
+                  </div>
+              </div>
+          </section>
+      </div>
+      
+      <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+          <div class="tab">
+              <!--Slide 1: Information-->
+              <div id="about-me" class="tab-content active">
+                  <div class="row">
+                      <div class="col-lg-6 align-self-center">
+                          <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                              <div class="row">
+                                  <div class="col-lg-12">
+                                      <h2>Unreal Engine Developer</h2>
+                                      <p data-i18n-key="information">My Informations</p>
+                                  </div>
+                                  <div id="contact-button" class="col-lg-12">
+                                      <div class="white-button first-button scroll-to-section">
+                                          <a href="mailto:truongnv.dev@gmail.com">Send mail <i class="fa fa-envelope"></i></a>
+                                      </div>
+                                      <div class="white-button scroll-to-section">
+                                          <a href="https://www.linkedin.com/in/truong-nguyen-883b79234/">Linkedin <i class="fab fa-linkedin"></i></a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-lg-6">
+                          <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                              <img src="assets/images/unreal-engine.png" alt="">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <!--Slide 2: Skills-->
+              <div id="skills" class="tab-content">
+                  <div class="skills section">
+                      <div class="container">
+                          <div class="row">
+                              <div class="col-lg-8 offset-lg-2">
+                                  <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+                                      <h4 data-i18n-key="skills-title">Acknowledged &amp; Skills</h4>
+                                      <img src="assets/images/heading-line-dec.png" alt="">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <div class="swiper skills-swiper  wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" style="padding: 30px;">
+                          <div class="swiper-wrapper">
+                              <div class="skill-item swiper-slide">
+                                  <div class="row">
+                                      <div class="col-lg-6"><div class="icon"><img src="assets/images/c++-icon.png"></div></div>
+                                      <div class="col-lg-6" style="color:darkorange">
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star" style="color:gray"></i>
+                                      </div>
+                                  </div>
+                                  <h4>C Plus Plus (C++)</h4>
+                                  <p data-i18n-key="cplus-skill-des">I develop games with Unreal Engine using C++, emphasizing performance, optimization, and gameplay.</p>
+                              </div>
+                              <div class="skill-item swiper-slide">
+                                  <div class="row">
+                                      <div class="col-lg-6"><div class="icon"><img src="assets/images/ue-logo.png"></div></div>
+                                      <div class="col-lg-6" style="color:darkorange">
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star" style="color:gray"></i>
+                                      </div>
+                                  </div>
+                                  <h4>Unreal Engine 4 &amp; 5</h4>
+                                  <p data-i18n-key="ue-skill-des">I have more than 3 years at Game Development using Unreal Engine (C++ and Blueprint).</p>
+                              </div>
+                              <div class="skill-item swiper-slide">
+                                  <div class="row">
+                                      <div class="col-lg-6"><div class="icon"><img src="assets/images/metahuman-blue.png" alt="metahuman-logo"></div></div>
+                                      <div class="col-lg-6" style="color:darkorange">
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star" style="color:gray"></i>
+                                      </div>
+                                  </div>
+                                  <h4>Metahuman</h4>
+                                  <p data-i18n-key="meta-human-skill-des">I'm using Metahuman to create Characters for Game Development in Unreal Engine.</p>
+                              </div>
+                              <div class="skill-item swiper-slide">
+                                  <div class="row">
+                                      <div class="col-lg-6"><div class="icon"><img src="assets/images/rest-api-icon.png"></div></div>
+                                      <div class="col-lg-6" style="color:darkorange">
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star" style="color:gray"></i>
+                                          <i class="fa fa-star" style="color:gray"></i>
+                                      </div>
+                                  </div>
+                                  <h4>REST API</h4>
+                                  <p data-i18n-key="rest-skill-des">I'm using REST APIs to perform database function. It could be get/set player information, get balance, ...</p>
+                              </div>
+                              <div class="skill-item swiper-slide">
+                                  <div class="row">
+                                      <div class="col-lg-6"><div class="icon"><img src="assets/images/socketio-logo.png"></div></div>
+                                      <div class="col-lg-6" style="color:darkorange">
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star" style="color:gray"></i>
+                                          <i class="fa fa-star" style="color:gray"></i>
+                                      </div>
+                                  </div>
+                                  <h4>Socket IO</h4>
+                                  <p data-i18n-key="socketio-skill-des">I'm using SocketIO to create some basic social network functions: chat, friends, notification.</p>
+                              </div>
+                              <div class="skill-item swiper-slide">
+                                  <div class="row">
+                                      <div class="col-lg-6"><div class="icon"><img src="assets/images/postman-logo.png"></div></div>
+                                      <div class="col-lg-6" style="color:darkorange">
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star" style="color:gray"></i>
+                                      </div>
+                                  </div>
+                                  <h4>Postman</h4>
+                                  <p data-i18n-key="postman-skill-des">I'm using Postman to test API's functionality before implement into game.</p>
+                              </div>
+
+                              <div class="skill-item swiper-slide">
+                                  <div class="row">
+                                      <div class="col-lg-6"><div class="icon"><img src="assets/images/github-perforce-icon.png" alt="github-perforce-icon"></div></div>
+                                      <div class="col-lg-6" style="color:darkorange">
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star" style="color:gray"></i>
+                                      </div>
+                                  </div>
+                                  <h4>Github & Perforce</h4>
+                                  <p data-i18n-key="git-skill-des">I'm using Github & Perforce as source control tools to manage projects and track changes in code.</p>
+                              </div>
+
+                              <div class="skill-item swiper-slide">
+                                  <div class="row">
+                                      <div class="col-lg-6"><div class="icon"><img src="assets/images/cc4-logo.png"></div></div>
+                                      <div class="col-lg-6" style="color:darkorange">
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star" style="color:gray"></i>
+                                          <i class="fa fa-star" style="color:gray"></i>
+                                      </div>
+                                  </div>
+                                  <h4>Character Creator 4</h4>
+                                  <p data-i18n-key="cc4-skill-des">I'm using Character Creator 4 to create Characters for Game Development in Unreal Engine.</p>
+                              </div>
+                              <div class="skill-item swiper-slide">
+                                  <div class="row">
+                                      <div class="col-lg-6"><div class="icon"><img src="assets/images/maya-blender-logo.png"></div></div>
+                                      <div class="col-lg-6" style="color:darkorange">
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star" style="color:gray"></i>
+                                          <i class="fa fa-star" style="color:gray"></i>
+                                          <i class="fa fa-star" style="color:gray"></i>
+                                      </div>
+                                  </div>
+                                  <h4>Maya &amp; Blender</h4>
+                                  <p data-i18n-key="maya-skill-des">I'm using Maya and Blender to modeling 3D object for Game Development.</p>
+                              </div>
+                              <div class="skill-item swiper-slide">
+                                  <div class="row">
+                                      <div class="col-lg-6"><div class="icon"><img src="assets/images/unity-logo.png"></div></div>
+                                      <div class="col-lg-6" style="color:darkorange">
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star" style="color:gray"></i>
+                                          <i class="fa fa-star" style="color:gray"></i>
+                                          <i class="fa fa-star" style="color:gray"></i>
+                                      </div>
+                                  </div>
+                                  <h4>Unity</h4>
+                                  <p  data-i18n-key="unity-skill-des">I have experience at Game Development using Unity. I made a casual game in college by Unity.</p>
+                              </div>
+                              <div class="skill-item swiper-slide">
+                                  <div class="row">
+                                      <div class="col-lg-6"><div class="icon"><img src="assets/images/csharp-icon.png"></div></div>
+                                      <div class="col-lg-6" style="color:darkorange">
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star" style="color:gray"></i>
+                                          <i class="fa fa-star" style="color:gray"></i>
+                                          <i class="fa fa-star" style="color:gray"></i>
+                                      </div>
+                                  </div>
+                                  <h4>C Sharp (C#)</h4>
+                                  <p data-i18n-key="c#-skill-des">I used C# for Game Development with Unity and Back-End Development for game.</p>
+                              </div>
+                              <div class="skill-item swiper-slide">
+                                  <div class="row">
+                                      <div class="col-lg-6"><div class="icon"><img src="assets/images/android-studio-java-icon.png"></div></div>
+                                      <div class="col-lg-6" style="color:darkorange">
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star"></i>
+                                          <i class="fa fa-star" style="color:gray"></i>
+                                          <i class="fa fa-star" style="color:gray"></i>
+                                      </div>
+                                  </div>
+                                  <h4>Android Studio &amp; Java</h4>
+                                  <p data-i18n-key="android-skill-des">I used Android Studio (Java) to create an English learning app for mobile (similar to Duolingo).</p>
+                              </div>
+                          </div>
+                          <div class="wow fadeIn" data-wow-duration="1.5s" data-wow-delay="1.5s">
+                              <div class="swiper-pagination-skills" style="text-align: center; margin-top: 2rem"></div>
+                          </div>
+                      </div>
+                  </div>
+                  
+              </div>
+
+              <!--Slide 3: Elitant-->
+              <div id="elitant" class="tab-content">
+                  <div class="portfolio">
+                      <div class="container swiper portfolio-swiper">
+                          <div class="swiper-wrapper">
+
+                              <!--Main Slide-->
+                              <div class="swiper-slide">
+                                  <div class="row">
+                                      <div class="col-lg-8 wow fadeInDown" data-wow-duration="1s" data-wow-delay="1s">
+                                          <iframe id="elitant-1" class="video-player" src="https://www.youtube.com/embed/PsZ6OIt1neE?si=Kq7qHIraN37a1iwW&enablejsapi=1" title="Elitant Portfolio 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                      </div>
+                                      <div class="col-lg-4 align-content-start wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                                          <div class="section-heading">
+                                              <h4 class="game-title"><strong>Elitant</strong></h4>
+                                              <div class="game-tags">
+                                                  <ul>
+                                                      <li class="tag">Game</li>
+                                                      <li class="tag">3D</li>
+                                                      <li class="tag">Multiplayer</li>
+                                                      <li class="tag">PvP</li>
+                                                      <li class="tag">FPS</li>
+                                                      <li class="tag">E-Sports</li>
+                                                      <li class="tag">Hero Shooter</li>
+                                                      <li class="tag">GameFi</li>
+                                                      <li class="tag">NFT</li>
+                                                  </ul>
+                                              </div>
+                                          </div>
+                                          <div class="description">
+                                              <h6><span style="font-weight: bold">Engine</span>: Unreal Engine 5.3</h6>
+                                              <h6><span style="font-weight: bold" data-i18n-key="platform">Platforms</span>: Windows</h6>
+                                              <p class="quote"><b>Elitant </b> <span data-i18n-key="elitant-description">Elitant Description</span></p>
+                                              <span data-i18n-key="lead-role">Role</span>
+                                              <ul>
+                                                  <li data-i18n-key="project-management">• Project Management</li>
+                                                  <li data-i18n-key="dev-lyra-starter">• Developed from Lyra Starter</li>
+                                                  <li data-i18n-key="core-game-mechanics">• Core Gameplay Mechanics</li>
+                                                  <li>• Gameplay Ability System (GAS)</li>
+                                                  <li>• Epic Online Services (EOS)</li>
+                                                  <li>• User Interfaces (Widget)</li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <!--Second Slide-->
+                              <div class="swiper-slide">
+                                  <div class="row">
+                                      <div class="col-lg-12">
+                                          <div class="row">
+                                              <div class="col-lg-8">
+                                                  <iframe id="elitant-2" class="video-player" src="https://www.youtube.com/embed/p1SXVPjy5Dk?si=CqOLJf-sNcVzPD-N&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                              </div>
+                                              <div class="col-lg-4 align-content-start">
+                                                  <div class="section-heading">
+                                                      <h4 class="game-title"><strong>Elitant</strong></h4>
+                                                      <h4 class="title">Unreal Engine Developer</h4>
+                                                  </div>
+                                                  <div class="description">
+                                                      <div class="work-card">
+                                                          <h6 class="work-title" data-i18n-key="core-game-mechanics">Core Game Mechanics</h6>
+                                                          <ul>
+                                                              <li data-i18n-key="elitant-core-1">• Hero Shooter Tactical - Multiplayer</li>
+                                                              <li data-i18n-key="elitant-core-2">• Hero's Abilities</li>
+                                                              <li data-i18n-key="elitant-core-3">• Game Mode: Plant Bomb</li>
+                                                          </ul>
+                                                      </div>
+                                                      <div class="work-card">
+                                                          <h6 class="work-title">Gameplay Ability System</h6>
+                                                          <ul>
+                                                              <li data-i18n-key="elitant-gas-1">• Attribute Set: HP, Armor, Fire Speed, Reload Speed, etc...</li>
+                                                              <li data-i18n-key="elitant-gas-2">• Gameplay Ability: Hero's skills, shoot, reload, ...</li>
+                                                              <li data-i18n-key="elitant-gas-3">• Effects/Tag: Buffs/Debuff, Damage, etc... </li>
+                                                          </ul>
+                                                      </div>
+                                                      <div class="work-card">
+                                                          <h6 class="work-title">Epic Online Service</h6>
+                                                          <ul>
+                                                              <li data-i18n-key="elitant-eos-1">• Login, Player info, Friend, etc...</li>
+                                                              <li data-i18n-key="elitant-eos-2">• Lobby, Matchmaking</li>
+                                                          </ul>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                      </div>
+                  </div>
+              </div>
+
+              <!--Slide 4: GPT Wars-->
+              <div id="gpt-wars" class="tab-content">
+                  <div class="portfolio">
+                      <div class="container swiper portfolio-swiper">
+                          <div class="swiper-wrapper">
+
+                              <!--Main Slide-->
+                              <div class="swiper-slide">
+                                  <div class="row">
+                                      <div class="col-lg-8 wow fadeInDown" data-wow-duration="1s" data-wow-delay="1s">
+                                          <iframe id="gpt-wars-1" class="video-player" src="https://www.youtube.com/embed/tT4TkmU5Cy8?si=_w-26Y4wUWr7-IiU&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                      </div>
+                                      <div class="col-lg-4 align-content-start wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                                          <div class="section-heading">
+                                              <h4 class="game-title"><strong>GPT Wars</strong></h4>
+                                              <div class="game-tags">
+                                                  <ul>
+                                                      <li class="tag">Game</li>
+                                                      <li class="tag">Prototype</li>
+                                                      <li class="tag">3D</li>
+                                                      <li class="tag">FPS/TPS</li>
+                                                      <li class="tag">PvE</li>
+                                                      <li class="tag">GameFi</li>
+                                                      <li class="tag">NFT</li>
+                                                  </ul>
+                                              </div>
+                                          </div>
+                                          <div class="description">
+                                              <h6><span style="font-weight: bold">Engine</span>: Unreal Engine 5.4</h6>
+                                              <h6><span style="font-weight: bold" data-i18n-key="platform">Platforms</span>: Windows</h6>
+                                              <p class="quote"><b>GPT Wars</b> <span data-i18n-key="gptwars-description">GPT Wars Description</span></p>
+                                              <span data-i18n-key="gptwars-role">Making a First Person Shooter Game:</span>
+                                              <ul>
+                                                  <li data-i18n-key="dev-lyra-starter">• Developed from Lyra Starter</li>
+                                                  <li data-i18n-key="core-game-mechanics">• Core Gameplay Mechanics</li>
+                                                  <li>• Gameplay Ability System (GAS)</li>
+                                                  <li>• AI Bot: Enemies, Boss</li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <!--Second Slide-->
+                              <div class="swiper-slide">
+                                  <div class="row">
+                                      <div class="col-lg-12">
+                                          <div class="row">
+                                              <div class="col-lg-8">
+                                                  <iframe id="gpt-wars-2" class="video-player" src="https://www.youtube.com/embed/lGM6f-BEKEM?si=w3PZB-bXFF1xhczl&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                              </div>
+                                              <div class="col-lg-4 align-content-start">
+                                                  <div class="section-heading">
+                                                      <h4 class="game-title"><strong>GPT Wars</strong></h4>
+                                                      <h4 class="title">Unreal Engine Developer</h4>
+                                                  </div>
+                                                  <div class="description">
+                                                      <div class="work-card">
+                                                          <h6 class="work-title" data-i18n-key="core-game-mechanics">Core Game Mechanics</h6>
+                                                          <ul>
+                                                              <li data-i18n-key="gptwars-core-1">• PvE Shooter</li>
+                                                              <li data-i18n-key="gptwars-core-2">• Game Mode: Enemy Waves</li>
+                                                              <li data-i18n-key="gptwars-core-3">• Switch FPS/TPS</li>
+                                                          </ul>
+                                                      </div>
+
+                                                      <div class="work-card">
+                                                          <h6 class="work-title">Gameplay Ability System</h6>
+                                                          <ul>
+                                                              <li data-i18n-key="gptwars-gas-1">• Attribute Set: HP, Armor</li>
+                                                              <li data-i18n-key="gptwars-gas-2">• Gameplay Ability: Shoot, Reload, Heal, Throw Grenade, etc...</li>
+                                                              <li data-i18n-key="gptwars-gas-3">• Effects/Tag: Buffs/Debuff, Damage, etc... </li>
+                                                          </ul>
+                                                      </div>
+
+                                                      <div class="work-card">
+                                                          <h6 class="work-title">AI Bot</h6>
+                                                          <ul>
+                                                              <li data-i18n-key="gptwars-ai-1">• Behavior Tree, Blackboard: Enemies action (patrol, chase, attack)</li>
+                                                              <li>• EQS, Task, etc...</li>
+                                                          </ul>
+                                                      </div>
+
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                      </div>
+                  </div>
+              </div>
+
+              <!--Slide 5: MCC-->
+              <div id="mcc" class="tab-content">
+                  <div class="portfolio">
+                      <div class="container swiper portfolio-swiper">
+                          <div class="swiper-wrapper">
+
+                              <!--Main Slide-->
+                              <div class="swiper-slide">
+                                  <div class="row">
+                                      <div class="col-lg-12">
+                                          <div class="row">
+                                              <div class="col-lg-8 wow fadeInDown" data-wow-duration="1s" data-wow-delay="1s">
+                                                  <img src="assets/images/mcc-bg-1.jpg" alt="MCC-1">
+                                              </div>
+                                              <div class="col-lg-4 align-content-start wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                                                  <div class="section-heading">
+                                                      <h4 class="game-title"><strong>Meta Casino City</strong></h4>
+                                                      <div class="game-tags">
+                                                          <ul>
+                                                              <li class="tag">Game</li>
+                                                              <li class="tag">3D</li>
+                                                              <li class="tag">Multiplayer</li>
+                                                              <li class="tag">Pixel Streaming</li>
+                                                              <li class="tag">Open World</li>
+                                                              <li class="tag">Meta-verse</li>
+                                                              <li class="tag">GameFi</li>
+                                                              <li class="tag">NFT</li>
+                                                          </ul>
+                                                      </div>
+                                                  </div>
+                                                  <div class="description">
+                                                      <h6><span style="font-weight: bold">Engine</span>: Unreal Engine 5.1</h6>
+                                                      <h6><span style="font-weight: bold" data-i18n-key="platform">Platforms</span>: Windows / Linux</h6>
+                                                      <p class="quote"><b>Meta Casino City</b> <span data-i18n-key="mcc-description">MCC Description</span></p>
+                                                      <span data-i18n-key="lead-role">Role</span>
+                                                      <ul>
+                                                          <li data-i18n-key="project-management">• Project Management</li>
+                                                          <li data-i18n-key="game-features">• Game Features</li>
+                                                          <li data-i18n-key="localization">• Localization (Multilanguage)</li>
+                                                          <li>• RestAPI / SocketIO / Integrate OpenAI</li>
+                                                          <li data-i18n-key="deploy-aws">• Deploy Dedicated Server on Amazon Gamelift (AWS)</li>
+                                                          <li>• User Interfaces (Widget)</li>
+                                                      </ul>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <!--Second Slide-->
+                              <div class="swiper-slide">
+                                  <div class="row">
+                                      <div class="col-lg-12">
+                                          <div class="row">
+                                              <div class="col-lg-8">
+<!--                                                  <video src="assets/videos/mcc-video.mp4" preload="none" poster="assets/images/mcc-bg-3.jpg" controls>Your browser doesn't support play video!</video>-->
+                                                  <video class="video-player" width="560" height="315" controls>
+                                                      <source src="https://go.metacasinocity.io/static/media/video-home.d41c0eb4cf577b06ff91.mp4" type="video/mp4">
+                                                      Your browser does not support the video tag.
+                                                  </video>
+                                              </div>
+                                              <div class="col-lg-4 align-content-start">
+                                                  <div class="section-heading">
+                                                      <h4 class="game-title">Meta Casino City</h4>
+                                                      <h4 class="title">Unreal Engine Developer</h4>
+                                                  </div>
+                                                  <div class="description">
+                                                      <div class="work-card">
+                                                          <h6 class="work-title" data-i18n-key="game-features">Game Features</h6>
+                                                          <ul>
+                                                              <li data-i18n-key="mcc-core-1">• Pixel Streaming Setup: play game via browser</li>
+                                                              <li data-i18n-key="mcc-core-2">• Interact System</li>
+                                                              <li data-i18n-key="mcc-core-3">• Costume: Change Clothes, Avatar, etc...</li>
+                                                              <li data-i18n-key="mcc-core-4">• Car driving</li>
+                                                              <li data-i18n-key="mcc-core-5">• Web browser in game (play web game)</li>
+                                                          </ul>
+                                                      </div>
+
+                                                      <div class="work-card">
+                                                          <h6 class="work-title">RestAPI / SocketIO</h6>
+                                                          <ul>
+                                                              <li data-i18n-key="mcc-api-1">Working with backend to develop user features in UE:</li>
+                                                              <li data-i18n-key="mcc-api-2">• Login / Logout</li>
+                                                              <li data-i18n-key="mcc-api-3">• Get / Save User Info (Inventory, NFT, Credits, ...)</li>
+                                                              <li data-i18n-key="mcc-api-4">• Social Network</li>
+                                                          </ul>
+                                                      </div>
+
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                      </div>
+                  </div>
+              </div>
+
+              <!--Slide 6: Osimi-->
+              <div id="osimi" class="tab-content">
+                  <div class="portfolio">
+                      <div class="container swiper portfolio-swiper">
+                          <div class="swiper-wrapper">
+
+                              <!--Main Slide-->
+                              <div class="swiper-slide">
+                                  <div class="row">
+                                      <div class="col-lg-12">
+                                          <div class="row">
+                                              <div class="col-lg-8 wow fadeInDown" data-wow-duration="1s" data-wow-delay="1s">
+                                                  <iframe id="osimi-city-1" class="video-player" src="https://www.youtube.com/embed/Qz5gK7zm1J8?si=sRbMBiiyXgWu0pHF&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                              </div>
+                                              <div class="col-lg-4 align-content-start wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                                                  <div class="section-heading">
+                                                      <h4 class="game-title"><strong>Osimi City</strong></h4>
+                                                      <div class="game-tags">
+                                                          <ul>
+                                                              <li class="tag">Game</li>
+                                                              <li class="tag">3D</li>
+                                                              <li class="tag">Co-op Multiplayer</li>
+                                                              <li class="tag">Zombie Shooter</li>
+                                                              <li class="tag">GameFi</li>
+                                                              <li class="tag">NFT</li>
+                                                          </ul>
+                                                      </div>
+                                                  </div>
+                                                  <div class="description">
+                                                      <h6><span style="font-weight: bold">Engine</span>: Unreal Engine 4.27</h6>
+                                                      <h6><span style="font-weight: bold" data-i18n-key="platform">Platforms</span>: Mobile</h6>
+                                                      <p class="quote"><b>Osimi City</b> <span data-i18n-key="osimi-description"> Osimi Description</span></p>
+                                                      <span data-i18n-key="dev-role">Role:</span>
+                                                      <ul>
+                                                          <li data-i18n-key="core-game-mechanics">• Core Gameplay Mechanics</li>
+                                                          <li>• Gameplay Ability System (GAS)</li>
+                                                          <li>• Epic Online Services (EOS)</li>
+                                                          <li>• AI Bot</li>
+                                                          <li>• RestAPI</li>
+                                                          <li>• User Interfaces (Widget)</li>
+                                                          <li data-i18n-key="release-mobile">• Release game on Google Play and Appstore </li>
+                                                      </ul>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <!--Second Slide-->
+                              <div class="swiper-slide">
+                                  <div class="row">
+                                      <div class="col-lg-12">
+                                          <div class="row">
+                                              <div class="col-lg-8">
+                                                  <iframe id="osimi-city-2" class="video-player" src="https://www.youtube.com/embed/tDoDwAgGjxo?si=VWAaIPsNg6tuiJly&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                              </div>
+                                              <div class="col-lg-4 align-content-start">
+                                                  <div class="section-heading">
+                                                      <h4 class="game-title">Osimi City</h4>
+                                                      <h4 class="title">Unreal Engine Developer</h4>
+                                                  </div>
+                                                  <div class="description">
+                                                      <div class="work-card">
+                                                          <h6 class="work-title" data-i18n-key="core-game-mechanics">• Core Gameplay Mechanics</h6>
+                                                          <ul>
+                                                              <li data-i18n-key="osimi-core-1">• Zombie Shooter</li>
+                                                              <li data-i18n-key="osimi-core-2">• Game Mode: Enemy Waves</li>
+                                                              <li data-i18n-key="osimi-core-3">• Inventory System</li>
+                                                              <li data-i18n-key="osimi-core-4">• Loadout System: Character and Weapons</li>
+                                                          </ul>
+                                                      </div>
+
+                                                      <div class="work-card">
+                                                          <h6 class="work-title">Gameplay Ability System</h6>
+                                                          <ul>
+                                                              <li data-i18n-key="osimi-gas-1">• Attribute Set: HP, Stamina, Attack Damage, Defense, etc...</li>
+                                                              <li data-i18n-key="osimi-gas-2">• Gameplay Ability: Shoot, Reload, Healing, Shopping ...</li>
+                                                              <li data-i18n-key="osimi-gas-3">• Effects/Tag: Healing, Damage, Poison, etc... </li>
+                                                          </ul>
+                                                      </div>
+
+                                                      <div class="work-card">
+                                                          <h6 class="work-title">Epic Online Services</h6>
+                                                          <ul>
+                                                              <li>• GooglePlay API</li>
+                                                              <li>• Appstore API</li>
+                                                          </ul>
+                                                      </div>
+
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <!--Third Slide-->
+                              <div class="swiper-slide">
+                                  <div class="row">
+                                      <div class="col-lg-12">
+                                          <div class="row">
+                                              <div class="col-lg-8">
+                                                  <img src="assets/images/osimi-bg.jpg" alt="Osimi-Banner">
+                                              </div>
+                                              <div class="col-lg-4 align-content-start">
+                                                  <div class="section-heading">
+                                                      <h4 class="game-title">Osimi City</h4>
+                                                      <h4 class="title">Unreal Engine Developer</h4>
+                                                  </div>
+
+                                                  <div class="description">
+
+                                                      <div class="work-card">
+                                                          <h6 class="work-title">RestAPI</h6>
+                                                          <ul>
+                                                              <li data-i18n-key="osimi-api-1">• Development Backend features (SQL Server): Get/Save User Info (Inventory, NFT, Credits, ...)</li>
+                                                              <li data-i18n-key="osimi-api-2">• Call API to get data from backend in UE</li>
+                                                          </ul>
+                                                      </div>
+
+                                                      <div class="work-card">
+                                                          <h6 class="work-title">• AI Bot</h6>
+                                                          <ul>
+                                                              <li>• Behavior Tree</li>
+                                                              <li>• Blackboard</li>
+                                                          </ul>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                      </div>
+                  </div>
+              </div>
+
+              <!--Slide 7: Graduation Thesis-->
+              <div id="graduation" class="tab-content">
+                  <div class="portfolio">
+                      <div class="container swiper portfolio-swiper">
+                          <div class="swiper-wrapper">
+
+                              <!--Main Slide-->
+                              <div class="swiper-slide">
+                                  <div class="row">
+                                      <div class="col-lg-12">
+                                          <div class="row">
+                                              <div class="col-lg-8 wow fadeInDown" data-wow-duration="1s" data-wow-delay="1s">
+                                                  <iframe id="doh-1" class="video-player" src="https://www.youtube.com/embed/mDJkZwFy3l8?si=511x9ZCvC26Rdznx&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                              </div>
+                                              <div class="col-lg-4 align-content-start wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                                                  <div class="section-heading">
+                                                      <h4 class="game-title"><strong>Demon of Hatred</strong></h4>
+                                                      <div class="game-tags">
+                                                          <ul>
+                                                              <li class="tag">Game</li>
+                                                              <li class="tag">Graduation Thesis</li>
+                                                              <li class="tag">3D</li>
+                                                              <li class="tag">Co-op Multiplayer</li>
+                                                              <li class="tag">PvE</li>
+                                                          </ul>
+                                                      </div>
+                                                  </div>
+                                                  <div class="description">
+                                                      <h6><span style="font-weight: bold">Engine</span>: Unreal Engine 4.27</h6>
+                                                      <h6><span style="font-weight: bold" data-i18n-key="platform">Platforms</span>: Windows</h6>
+                                                      <p class="quote"><span data-i18n-key="graduation-description">Graduation Description</span></p>
+                                                      <span data-i18n-key="graduation-role">Personal Graduation Project:</span>
+                                                      <ul>
+                                                          <li data-i18n-key="project-management">• Project Management</li>
+                                                          <li data-i18n-key="core-game-mechanics">• Core Gameplay Mechanics</li>
+                                                          <li>• Gameplay Ability System</li>
+                                                          <li data-i18n-key="co-op-steam">• Co-op Multiplayer via Steam</li>
+                                                          <li>• User Interfaces (Widget)</li>
+                                                      </ul>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <!--Second Slide-->
+                              <div class="swiper-slide">
+                                  <div class="row">
+                                      <div class="col-lg-12">
+                                          <div class="row">
+                                              <div class="col-lg-8">
+                                                  <iframe id="doh-2" class="video-player" src="https://www.youtube.com/embed/1wFxGA62d-I?si=kKfz4RcjFcqf2_uV&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                              </div>
+                                              <div class="col-lg-4 align-content-start">
+                                                  <div class="section-heading">
+                                                      <h4 class="game-title">Demon of Hatred</h4>
+                                                      <h4 class="title">Unreal Engine Developer</h4>
+                                                  </div>
+                                                  <div class="description">
+                                                      <div class="work-card">
+                                                          <h6 class="work-title" data-i18n-key="core-game-mechanics">• Core Gameplay Mechanics</h6>
+                                                          <ul>
+                                                              <li data-i18n-key="doh-core-1">• Action RPG</li>
+                                                              <li data-i18n-key="doh-core-2">• Game Mode: Dungeon</li>
+                                                              <li data-i18n-key="doh-core-3">• Co-op Multiplayer via Steam</li>
+
+                                                          </ul>
+                                                      </div>
+
+                                                      <div class="work-card">
+                                                          <h6 class="work-title">Gameplay Ability System</h6>
+                                                          <ul>
+                                                              <li data-i18n-key="doh-gas-1">• Attribute Set: HP, MP, Attack Damage, Defense</li>
+                                                              <li data-i18n-key="doh-gas-2">• Gameplay Ability: Attack, Skills, Dash, Sprint,...</li>
+                                                              <li data-i18n-key="doh-gas-3">• Effects/Tag: Healing, Damage, Attack Damage buff, Stun, Knockdown, etc... </li>
+                                                          </ul>
+                                                      </div>
+
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+<!--      <div class="swiper-button-next"></div>-->
+<!--      <div class="swiper-button-prev"></div>-->
+      
+      <!-- Nav Menu-->
+      <footer>
+          <div id="menu" class="nav-menu">
+              <div class="nav-item active" id="home-btn" onclick="openPortfolio(this, 'about-me');">
+                  <img src="assets/images/avatar-button.png" alt="Image by freepik">
+              </div>
+              <div class="nav-item" onclick="openPortfolio(this, 'skills');">
+                  <img src="assets/images/skills.png" alt="Skills icon">
+              </div>
+              <div class="nav-item" onclick="openPortfolio(this, 'elitant');">
+                  <img src="assets/images/Elitant.png" alt="Elitant icon">
+              </div>
+              <div class="nav-item" onclick="openPortfolio(this, 'gpt-wars');">
+                  <img src="assets/images/GPTWars-2.png" alt="GPTWars icon">
+              </div>
+
+              <div class="nav-item" onclick="openPortfolio(this, 'mcc');">
+                  <img src="assets/images/MCC.png" alt="MCC icon">
+              </div>
+
+              <div class="nav-item" onclick="openPortfolio(this, 'osimi');">
+                  <img src="assets/images/osimi-1.png" alt="Osimi City icon">
+              </div>
+
+              <div class="nav-item" onclick="openPortfolio(this, 'graduation');">
+                  <img src="assets/images/doh.png" alt="Demon of Hatred icon">
+              </div>
+          </div>
+              
+          <div id="copyright">
+              <div class="copyright-text">
+                  <p>
+                      Copyright © 2025 Nguyen Van Truong. All Rights Reserved.
+                  </p>
+              </div>
+          </div>
+      </footer>
+
+      <!-- Scripts -->
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/js/owl-carousel.js"></script>
+      <script src="assets/js/animation.js"></script>
+      <script src="assets/js/imagesloaded.js"></script>
+      <script src="assets/js/popup.js"></script>
+      <script src="assets/js/custom.js"></script>
+      <!--Swiper Script-->
+      <script src="assets/js/swiper-bundle.min.js"></script>
+      <script src="assets/js/swiper-script.js"></script>
+
+      <script src="assets/js/localization.js"></script>
+      <script src="assets/js/portfolio.js"></script>
+      <!--Youtube Iframe API Script-->
+      <script src="https://www.youtube.com/iframe_api"></script>
+  </body>
+</html>
